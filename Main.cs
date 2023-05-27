@@ -70,14 +70,14 @@ namespace EnhancedWeaponControl
                     // (2) Full Auto firing mode
                     firemode = 1;
                     Game.FrameRender += OnFrameRender;
-                    Game.DisplayNotification($"~b~Weapon mode: Full Auto.~n~Press {Settings.FiringModeToggle} to switch.");
+                    Game.DisplayNotification($"~b~Weapon mode: Semi Auto.~n~Press {Settings.FiringModeToggle} to switch.");
                 }
                 else if (Game.IsKeyDown(Settings.FiringModeToggle) && firemode == 1)
                 {
                     // (1) Single shot firing mode
                     firemode = 2;
                     Game.FrameRender -= OnFrameRender;
-                    Game.DisplayNotification($"~b~Weapon mode: Single Shot.~n~Press {Settings.FiringModeToggle} to switch.");
+                    Game.DisplayNotification($"~b~Weapon mode: Full Auto.~n~Press {Settings.FiringModeToggle} to switch.");
                 }
                 // We don't need to have a function that handles firing mode 0, since that's full auto mode and that's enabled by default anyway.
             }
